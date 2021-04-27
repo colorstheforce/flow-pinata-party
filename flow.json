@@ -1,0 +1,43 @@
+{
+	"emulators": {
+		"default": {
+			"port": 3569,
+			"serviceAccount": "emulator-account"
+		}
+	},
+	"contracts": {
+		"PinataPartyContract": "./cadence/contracts/PinataPartyContract.cdc",
+		"PinnieToken": "./cadence/contracts/PinnieToken.cdc",
+		"MarketplaceContract": "./cadence/contracts/MarketplaceContract.cdc"
+	},
+	"networks": {
+		"emulator": {
+			"host": "127.0.0.1:3569",
+			"chain": "flow-emulator"
+		},
+		"mainnet": {
+			"host": "access.mainnet.nodes.onflow.org:9000",
+			"chain": "flow-mainnet"
+		},
+		"testnet": {
+			"host": "access.devnet.nodes.onflow.org:9000",
+			"chain": "flow-testnet"
+		}
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"keys": "62ced7c8d475a1c2f2fd0cf582ac40a04b5dccad052d4b3f0314b786609eef42",
+			"chain": "flow-emulator"
+		},
+		"second-account": {
+			"address": "01cf0e2f2f715450",
+			"keys": "68a9ad61221feaee9afe304d6555676aeb0b81eae57605cc48b6f794500835ca"
+		}
+	},
+	"deployments": {
+		"emulator": {
+        	"emulator-account": ["PinataPartyContract", "PinnieToken", "MarketplaceContract"]
+     	}
+	}
+}
